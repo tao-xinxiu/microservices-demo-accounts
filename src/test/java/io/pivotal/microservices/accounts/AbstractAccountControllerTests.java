@@ -13,6 +13,7 @@ public abstract class AbstractAccountControllerTests {
 
 	protected static final String ACCOUNT_1 = "123456789";
 	protected static final String ACCOUNT_1_NAME = "Keri Lee";
+	protected static final String ACCOUNT_1_GETNAME = Account.accountNameGreeting + "Keri Lee";
 
 	@Autowired
 	AccountsController accountController;
@@ -24,10 +25,10 @@ public abstract class AbstractAccountControllerTests {
 
 		Assert.assertNotNull(account);
 		Assert.assertEquals(ACCOUNT_1, account.getNumber());
-		Assert.assertEquals(ACCOUNT_1_NAME, account.getOwner());
+		Assert.assertEquals(ACCOUNT_1_GETNAME, account.getOwner());
 		Logger.getGlobal().info("End validAccount test");
 	}
-	
+
 	@Test
 	public void validAccountOwner() {
 		Logger.getGlobal().info("Start validAccount test");
@@ -39,7 +40,7 @@ public abstract class AbstractAccountControllerTests {
 
 		Account account = accounts.get(0);
 		Assert.assertEquals(ACCOUNT_1, account.getNumber());
-		Assert.assertEquals(ACCOUNT_1_NAME, account.getOwner());
+		Assert.assertEquals(ACCOUNT_1_GETNAME, account.getOwner());
 		Logger.getGlobal().info("End validAccount test");
 	}
 
@@ -54,10 +55,10 @@ public abstract class AbstractAccountControllerTests {
 
 		Account account = accounts.get(0);
 		Assert.assertEquals(ACCOUNT_1, account.getNumber());
-		Assert.assertEquals(ACCOUNT_1_NAME, account.getOwner());
+		Assert.assertEquals(ACCOUNT_1_GETNAME, account.getOwner());
 		Logger.getGlobal().info("End validAccount test");
 	}
-	
+
 	@Test
 	public void validAccountOwnerMatches2() {
 		Logger.getGlobal().info("Start validAccount test");
@@ -69,7 +70,7 @@ public abstract class AbstractAccountControllerTests {
 
 		Account account = accounts.get(0);
 		Assert.assertEquals(ACCOUNT_1, account.getNumber());
-		Assert.assertEquals(ACCOUNT_1_NAME, account.getOwner());
+		Assert.assertEquals(ACCOUNT_1_GETNAME, account.getOwner());
 		Logger.getGlobal().info("End validAccount test");
 	}
 

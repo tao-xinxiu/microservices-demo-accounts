@@ -19,6 +19,7 @@ import javax.persistence.Table;
 public class Account implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	public static final String accountNameGreeting = "v1.2.0.RELEASE: Hello ";
 
 	public static Long nextId = 0L;
 
@@ -82,7 +83,7 @@ public class Account implements Serializable {
 	}
 
 	public String getOwner() {
-		return owner;
+		return accountNameGreeting + owner;
 	}
 
 	protected void setOwner(String owner) {
